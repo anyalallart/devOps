@@ -26,10 +26,8 @@ jobs:
     - name: Measure code coverage
       run: pytest --cov=.
 
-    #- name: Generate documentation
-     # run: |
-      #  pip install -r requirements-docs.txt
-       # mkdocs build
+    - name: Generate documentation
+      run: pydoc -w 
 
     #- name: Deploy to production
     #  if: github.ref == 'refs/heads/main'
