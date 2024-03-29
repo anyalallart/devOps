@@ -27,7 +27,7 @@ jobs:
       run: pytest --cov=.
 
     - name: Generate documentation
-      run: pydoc -w 
+      run: python -m pydoc sys
 
     #- name: Deploy to production
     #  if: github.ref == 'refs/heads/main'
