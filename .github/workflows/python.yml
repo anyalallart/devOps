@@ -27,7 +27,7 @@ jobs:
       run: pytest --cov=.
 
     - name: Generate documentation
-      run: python pydoc doc.txt -w main.py
+      run: python -m pydoc -w main.py
 
 
     #- name: Deploy to production
