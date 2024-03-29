@@ -27,12 +27,11 @@ jobs:
       run: pytest --cov=.
 
     - name: Generate documentation
-      run: |
-        pip install -r requirements-docs.txt
-        make docs
+      run: python -m pydoc -w main.py > doc.txt
 
-    - name: Deploy to production
-      if: github.ref == 'refs/heads/main'
-      run: |
-        pip install -r requirements-deploy.txt
-        fab deploy
+
+    #- name: Deploy to production
+    #  if: github.ref == 'refs/heads/main'
+     # run: |
+     #   pip install -r requirements-deploy.txt
+      #  fab deploy
